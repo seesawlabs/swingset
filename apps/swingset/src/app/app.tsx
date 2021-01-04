@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
+import { Header } from '@swingset/ui';
+import { HeaderColor } from '@swingset/data';
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -135,12 +137,11 @@ const StyledApp = styled.div`
 `;
 
 export function App() {
+  const color: HeaderColor = 'primary';
+
   return (
     <StyledApp>
-      <header className="flex">
-        <Logo width="75" height="75" />
-        <h1>Welcome to swingset!</h1>
-      </header>
+      <Header color={color} />
       <main>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
