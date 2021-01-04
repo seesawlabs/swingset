@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@swingset/data": ["libs/data/src/index.ts"]
+      "@swingset/data": ["libs/data/src/index.ts"],
+      "@swingset/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

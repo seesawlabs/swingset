@@ -1,3 +1,7 @@
 module.exports = {
-  projects: ['<rootDir>/apps/swingset', '<rootDir>/libs/data'],
+  projects: [
+    '<rootDir>/apps/swingset',
+    '<rootDir>/libs/data',
+    '<rootDir>/libs/ui',
+  ],
 };
