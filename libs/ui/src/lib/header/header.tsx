@@ -6,12 +6,18 @@ import styled from 'styled-components';
 export interface HeaderProps {
   color?: HeaderColor;
   style?: any;
+  hidden?: boolean;
 }
 
 const StyledHeader = styled.div`
   color: ${({ color, theme }) => color || theme.main};
 `;
 
+/**
+ * Header component
+ *
+ * @param props HeaderProps
+ */
 export function Header(props: HeaderProps) {
   return (
     <StyledHeader className="card" {...props}>

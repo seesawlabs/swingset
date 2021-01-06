@@ -18,3 +18,4 @@ export function Ui(props: UiProps) {
 }
 
 export default Ui;
+export * from './card';

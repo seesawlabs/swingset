@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
-import { Header } from '@swingset/ui';
+
 import { HeaderColor } from '@swingset/data';
 
 const StyledApp = styled.div`
@@ -136,12 +136,22 @@ const StyledApp = styled.div`
   }
 `;
 
+const Header = React.lazy(() =>
+  import('@swingset/ui').then(({ Header }) => ({ default: Header }))
+);
+const Card = React.lazy(() =>
+  import('@swingset/ui').then(({ Card }) => ({ default: Card }))
+);
+
 export function App() {
   const color: HeaderColor = 'primary';
 
   return (
     <StyledApp>
-      <Header color={color} />
+      <React.Suspense fallback={<div>loading</div>}>
+        <Header color="primary" />
+        <Card />
+      </React.Suspense>
       <main>
         <h2>Resources &amp; Tools</h2>
         <p>Thank you for using and showing some ♥ for Nx.</p>
