@@ -5,7 +5,8 @@ import styled from 'styled-components';
 import { ReactComponent as Logo } from './logo.svg';
 import star from './star.svg';
 
-import { HeaderColor } from '@swingset/data';
+import { UIColor } from '@swingset/ui-data';
+import { Footer } from '@swingset/ui';
 
 const StyledApp = styled.div`
   font-family: sans-serif;
@@ -143,12 +144,17 @@ const Card = React.lazy(() =>
   import('@swingset/ui').then(({ Card }) => ({ default: Card }))
 );
 
+const Title = React.lazy(() => import('./components/title'));
+const Link = React.lazy(() => import('./components/link'));
+
 export function App() {
-  const color: HeaderColor = 'primary';
+  const color: UIColor = 'primary';
 
   return (
     <StyledApp>
       <React.Suspense fallback={<div>loading</div>}>
+        <Title title="Hi hi hi" />
+        <Link link="#">Link</Link>
         <Header color="primary" />
         <Card />
       </React.Suspense>
@@ -235,6 +241,7 @@ nx affected:test
 nx affected:e2e
   `}</pre>
         </details>
+        <Footer color="primary" />
       </main>
     </StyledApp>
   );

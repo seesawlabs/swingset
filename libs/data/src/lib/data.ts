@@ -6,4 +6,4 @@ export function data(): string {
  * Header Type
  * @kind Boolean value
  */
-export type HeaderColor = 'primary' | 'secondary';
+export type UIColor = 'primary' | 'secondary';

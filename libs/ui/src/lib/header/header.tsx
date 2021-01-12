@@ -1,10 +1,10 @@
 import React from 'react';
-import { HeaderColor } from '@swingset/data';
+import { UIColor } from '@swingset/data';
 import styled from 'styled-components';
 
 /* eslint-disable-next-line */
 export interface HeaderProps {
-  color?: HeaderColor;
+  color?: UIColor;
   style?: any;
   hidden?: boolean;
 }

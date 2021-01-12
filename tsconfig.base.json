@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@swingset/data": ["libs/data/src/index.ts"],
-      "@swingset/ui": ["libs/ui/src/index.ts"]
+      "@swingset/ui": ["libs/ui/src/index.ts"],
+      "@swingset/ui-data": ["libs/ui-data/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

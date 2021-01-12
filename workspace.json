@@ -246,6 +246,31 @@
           }
         }
       }
+    },
+    "ui-data": {
+      "root": "libs/ui-data",
+      "sourceRoot": "libs/ui-data/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ui-data/**/*.ts"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ui-data"
+          ],
+          "options": {
+            "jestConfig": "libs/ui-data/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "cli": {

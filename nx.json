@@ -42,6 +42,9 @@
     "ui-e2e": {
       "tags": [],
       "implicitDependencies": ["ui"]
+    },
+    "ui-data": {
+      "tags": []
     }
   }
 }
